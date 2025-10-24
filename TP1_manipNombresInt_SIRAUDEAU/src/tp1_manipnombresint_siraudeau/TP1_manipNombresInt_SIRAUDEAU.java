@@ -23,6 +23,9 @@ public class TP1_manipNombresInt_SIRAUDEAU
         int nombre2;
         int somme;
         int diff; 
+        int produit;
+        int division;
+        double reste;
         Scanner sc = new Scanner(System.in); 
         System.out.print("Entrez le premier entier : ");
         nombre1 = sc.nextInt();
@@ -31,14 +34,26 @@ public class TP1_manipNombresInt_SIRAUDEAU
         somme=0;
         diff=0;
         {  
-        somme=somme+nombre1+nombre2; 
+            somme=somme+nombre1+nombre2; 
         }  
         // affichage du resultat  
         System.out.println("la somme de "+ nombre1 + " et " + nombre2+ " est :"+somme); 
         {
-         diff=diff+nombre1-nombre2;
+           diff=diff+nombre1-nombre2;
         }
         System.out.println("la difference de "+ nombre1 + " et " + nombre2+ " est :"+diff);
+        {
+            produit = nombre1*nombre2;
+        }
+        System.out.println("le produit de "+ nombre1 +" et "+ nombre2+ " est : " +produit);
+        {
+            division = nombre1 / nombre2;
+        {
+        }
+        reste = (nombre1*1.0)/nombre2 - division;
+        }
+        System.out.println("le quotient entier de "+ nombre1 +" et "+ nombre2+ " est : " +division +" et le reste de la division euclidienne est " +reste);
+ 
     }
     
 }
