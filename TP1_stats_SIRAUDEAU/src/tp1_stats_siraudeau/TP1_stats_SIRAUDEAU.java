@@ -4,6 +4,9 @@
  */
 package tp1_stats_siraudeau;
 
+import java.util.Random;
+import java.util.Scanner;
+
 /**
  *
  * @author emmas
@@ -16,30 +19,31 @@ public class TP1_stats_SIRAUDEAU {
     @SuppressWarnings("empty-statement")
     public static void main(String[] args) 
     {
-        Scanner sc = nex Scanner (Sysem.in);
-        Random rand = new Rnadom();
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
         
         int[] faces = new int[6];
         
-        System.out.println("Combien de fois voulez vous lancer le dé");
+        System.out.println("Combien de fois voulez vous lancer le de");
         int m = sc.nextInt();
         
-        for (int i = 0; i<m; i++);
+        for (int i = 0; i<m; i++)
         {
             int tirage = rand.nextInt(6);
             faces[tirage]++;
         }
         
         System.out.println("\nRésultats :");
-        for (int i=0; i<6; i++);
+        for (int i=0; i<6; i++)
         {
-            System.out.println("Face" + (i+1) + ":" + faces[i] +"fois");
+            System.out.println("Face" + (i + 1) + ":" + faces[i] +"fois");
         }   
+        
         System.out.println("\nRésultats en pourcentage :");
-        for (int i =0; i<6; i++);
+        for (int i =0; i<6; i++)
         {
             double pourcentage = (faces[i]*100.0)/m;
-            System.out.println("Face" + (i+1) + ":" + pourcentage +"%");
+            System.out.println("Face" + (i + 1) + ":" + pourcentage +"%");
         }
         
     }
