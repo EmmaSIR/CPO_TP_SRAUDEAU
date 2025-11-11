@@ -11,8 +11,24 @@ package tp2_manip_siraudeau;
 public class Moussaka {
     int nbCalories;
     
-    public Moussaka(int calories) {
-    nbCalories = calories;
+    public Moussaka() {
+    nbCalories = 500;
+    }
+    
+    public static void main(String[] args) 
+    {
+        // Création du tableau de 10 références
+        Moussaka[] tableau = new Moussaka[10];
+
+        // Création de 10 objets Moussaka
+        for (int i = 0; i < 10; i++) {
+            tableau[i] = new Moussaka();
+        }
+
+        // Affichage pour vérifier
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Objet " + i + " : " + tableau[i].nbCalories + " calories");
+        }
     }
     
 }
