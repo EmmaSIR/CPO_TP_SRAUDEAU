@@ -56,9 +56,28 @@ public class TP3_Heroic_Fantasy_SIRAUDEAU {
         listeArmes.add(chene);
         listeArmes.add(charme);
 
-         System.out.println("\n--- Affichage avec Vector (elementAt) ---");
-        for (int i = 0; i < listeArmesVect.size(); i++) {
+        System.out.println("\n--- Affichage avec Vector (elementAt) ---");
+        for (int i = 0; i < listeArmesVect.size(); i++) 
+        {
             System.out.println(listeArmesVect.elementAt(i));
+        }
+            
+        Magicien gandalf = new Magicien("Gandalf", 65, true);   // confirmé
+        Magicien garcimore = new Magicien("Garcimore", 44, false); // novice
+        
+        Guerrier conan = new Guerrier("Conan", 78, false);   // à pied
+        Guerrier lannister = new Guerrier("Lannister", 45, true); // à cheval
+
+        ArrayList<Personnage> listePersos = new ArrayList<>();
+
+        listePersos.add(gandalf);
+        listePersos.add(garcimore);
+        listePersos.add(conan);
+        listePersos.add(lannister);
+
+        for (Personnage p : listePersos) 
+        {
+        System.out.println(p);
         }
     }
     
