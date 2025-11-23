@@ -4,8 +4,12 @@
  */
 package tp3_heroic_fantasy_siraudeau;
 
+import Personnages.Personnage;
+import Personnages.Magicien;
+import Personnages.Guerrier;
 import Armes.Epee;
 import Armes.Arme;
+import Personnages.*;
 import Armes.Baton;
 import java.util.ArrayList;
 import java.util.Vector;

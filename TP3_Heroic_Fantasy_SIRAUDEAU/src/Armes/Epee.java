@@ -4,25 +4,21 @@
  */
 package Armes;
 
-import Armes.Arme;
-
 /**
  *
  * @author emmas
  */
-public class Epee extends Arme 
-{
-    int finesse;   
+public class Epee extends Arme {
+    
+    private int finesse;
 
-    public Epee(String n, int niv, int fin) {
-        super(n, niv);   
+    public Epee(String nom, int niveauAttaque, int finesse) {
+        super(nom, niveauAttaque);
 
-        if (fin > 100) {
-            fin = 100;
-        } else if (fin < 0) {
-            fin = 0;
-        }
-        finesse = fin;
+        if (finesse < 0) finesse = 0;
+        if (finesse > 100) finesse = 100;
+
+        this.finesse = finesse;
     }
 
     @Override
@@ -30,4 +26,3 @@ public class Epee extends Arme
         return super.toString() + " | Finesse : " + finesse;
     }
 }
-

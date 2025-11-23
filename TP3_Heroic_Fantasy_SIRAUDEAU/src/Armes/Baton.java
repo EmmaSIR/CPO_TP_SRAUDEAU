@@ -8,24 +8,21 @@ package Armes;
  *
  * @author emmas
  */
-public class Baton extends Arme{
+public class Baton extends Arme {
     
-    int age;   
+    private int age;
 
-    public Baton(String n, int niv, int ag) {
-        super(n, niv); 
+    public Baton(String nom, int niveauAttaque, int age) {
+        super(nom, niveauAttaque);
 
-        if (ag > 100) {
-            ag = 100;
-        } else if (ag < 0) {
-            ag = 0;
-        }
-        age = ag;
+        if (age < 0) age = 0;
+        if (age > 100) age = 100;
+
+        this.age = age;
     }
 
     @Override
     public String toString() {
         return super.toString() + " | Age : " + age;
     }
-    
 }
