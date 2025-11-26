@@ -145,11 +145,11 @@ public class FenetreQuiz extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRep2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep2ActionPerformed
-        verifierReponse(0);
+        verifierReponse(1);
     }//GEN-LAST:event_btnRep2ActionPerformed
 
     private void btnRep4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep4ActionPerformed
-        verifierReponse(1);
+        verifierReponse(3);
     }//GEN-LAST:event_btnRep4ActionPerformed
 
     private void btnRep3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep3ActionPerformed
@@ -157,7 +157,7 @@ public class FenetreQuiz extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRep3ActionPerformed
 
     private void btnRep1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRep1ActionPerformed
-        verifierReponse(3);
+        verifierReponse(0);
     }//GEN-LAST:event_btnRep1ActionPerformed
 
     private void JButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButton1ActionPerformed
