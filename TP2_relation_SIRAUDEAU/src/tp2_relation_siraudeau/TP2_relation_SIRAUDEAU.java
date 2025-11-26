@@ -25,19 +25,19 @@ public class TP2_relation_SIRAUDEAU {
         
         System.out.println("liste des voitures disponibles "+ uneClio  + "\n" + uneAutreClio   + "\n" + une2008   + "\n" + uneMicra ) ; 
 
-        bob.liste_voitures[0] = uneClio;  // ajout manuel
+        bob.liste_voitures[0] = uneClio;  
         bob.nbVoitures = 1;
-        uneClio.proprietaire = bob;       // attention à la casse
+        uneClio.proprietaire = bob;       
         
-        bob.liste_voitures[1] = uneAutreClio;  // ajout manuel
+        bob.liste_voitures[1] = uneAutreClio; 
         bob.nbVoitures = 2;
-        uneAutreClio.proprietaire = bob;       // attention à la casse
+        uneAutreClio.proprietaire = bob;     
         
-        reno.liste_voitures[0] = une2008;  // ajout manuel
+        reno.liste_voitures[0] = une2008;  
         reno.nbVoitures = 1;
-        une2008.proprietaire = reno;       // attention à la casse
+        une2008.proprietaire = reno;    
         
-        reno.liste_voitures[1] = uneMicra;  // ajout manuel
+        reno.liste_voitures[1] = uneMicra; 
         reno.nbVoitures = 2;
         uneMicra.proprietaire = reno;
 
