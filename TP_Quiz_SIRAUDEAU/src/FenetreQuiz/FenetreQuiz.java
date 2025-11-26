@@ -178,7 +178,7 @@ public class FenetreQuiz extends javax.swing.JFrame {
 
     private void initialiserQuestions() {
         listeQuestions = new ArrayList<>();
-
+ 
         listeQuestions.add(new Question("Capital de la France ?", 
                 "Paris", "Lyon", "Marseille", "Bordeaux", 0));
         listeQuestions.add(new Question("2 + 2 = ?", 
