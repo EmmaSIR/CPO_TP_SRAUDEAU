@@ -11,12 +11,26 @@ package miniprojet_cadenas_siraudeau;
 public class Interface extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Interface.class.getName());
+    private CadenasJeu jeu;
+    
+    private int[] chiffres = {0,0,0,0}; 
 
     /**
      * Creates new form Interface
      */
     public Interface() {
         initComponents();
+        jeu = new CadenasJeu();
+        mettreAJourAffichage();
+    }
+    
+     private void mettreAJourAffichage() {
+        texte_chiffre_0.setText("   " + chiffres[0]);
+        texte_chiffre_1.setText("   " + chiffres[1]);
+        texte_chiffre_2.setText("   " + chiffres[2]);
+        texte_chiffre_3.setText("   " + chiffres[3]);
+
+        texte_score.setText(jeu.getTentatives() + " sur " + jeu.getMaxTentatives());
     }
 
     /**
@@ -155,16 +169,17 @@ public class Interface extends javax.swing.JFrame {
                         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
                         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 210, -1, -1));
 
-                        texte_score.setText("0 sur 5");
-                        getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 230, 40, 20));
+                        texte_score.setText("   0 sur  5");
+                        texte_score.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+                        getContentPane().add(texte_score, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 60, 40));
 
-                        texte_nb_chiffres_exacts.setText("jLabel1");
+                        texte_nb_chiffres_exacts.setText("0");
                         getContentPane().add(texte_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, -1, -1));
 
-                        texte_nb_chiffres_haut.setText("jLabel4");
+                        texte_nb_chiffres_haut.setText("0");
                         getContentPane().add(texte_nb_chiffres_haut, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 240, -1, -1));
 
-                        texte_nb_chiffres_bas.setText("jLabel7");
+                        texte_nb_chiffres_bas.setText("0");
                         getContentPane().add(texte_nb_chiffres_bas, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 260, -1, -1));
 
                         texte_chiffre_0.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -191,23 +206,31 @@ public class Interface extends javax.swing.JFrame {
                     }// </editor-fold>//GEN-END:initComponents
 
     private void up_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_up_chiffre_2ActionPerformed
+        chiffres[1] = (chiffres[1] + 1) % 10;
+        mettreAJourAffichage();    }//GEN-LAST:event_up_chiffre_2ActionPerformed
 
     private void up_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_up_chiffre_3ActionPerformed
+        chiffres[2] = (chiffres[2] + 1) % 10;
+        mettreAJourAffichage();     }//GEN-LAST:event_up_chiffre_3ActionPerformed
 
     private void up_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_4ActionPerformed
-        // TODO add your handling code here:
+        chiffres[3] = (chiffres[3] + 1) % 10;
+        mettreAJourAffichage();
     }//GEN-LAST:event_up_chiffre_4ActionPerformed
 
     private void up_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_1ActionPerformed
-        // TODO add your handling code here:
+        chiffres[0] = (chiffres[0] + 9) % 10;
+        mettreAJourAffichage();
     }//GEN-LAST:event_up_chiffre_1ActionPerformed
 
     private void bouton_recommencerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_recommencerActionPerformed
-        // TODO add your handling code here:
+        jeu = new CadenasJeu();
+        chiffres = new int[]{0, 0, 0, 0}; 
+        mettreAJourAffichage(); 
+
+        texte_nb_chiffres_exacts.setText("0");
+        texte_nb_chiffres_haut.setText("0");
+        texte_nb_chiffres_bas.setText("0");
     }//GEN-LAST:event_bouton_recommencerActionPerformed
 
     private void down_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_1ActionPerformed
