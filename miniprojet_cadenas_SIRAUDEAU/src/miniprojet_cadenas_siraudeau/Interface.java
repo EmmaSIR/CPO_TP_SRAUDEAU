@@ -83,7 +83,7 @@ public class Interface extends javax.swing.JFrame {
                     up_chiffre_1ActionPerformed(evt);
                 }
             });
-            getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 37, 80, -1));
+            getContentPane().add(up_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 70, 20));
 
             up_chiffre_2.setText("/\\");
                 up_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +91,7 @@ public class Interface extends javax.swing.JFrame {
                         up_chiffre_2ActionPerformed(evt);
                     }
                 });
-                getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, -1, -1));
+                getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 70, 20));
 
                 up_chiffre_3.setText("/\\");
                     up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +99,7 @@ public class Interface extends javax.swing.JFrame {
                             up_chiffre_3ActionPerformed(evt);
                         }
                     });
-                    getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 37, 70, -1));
+                    getContentPane().add(up_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 70, 20));
 
                     up_chiffre_4.setText("/\\");
                         up_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
@@ -107,7 +107,7 @@ public class Interface extends javax.swing.JFrame {
                                 up_chiffre_4ActionPerformed(evt);
                             }
                         });
-                        getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 37, 70, -1));
+                        getContentPane().add(up_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 40, 70, 20));
 
                         down_chiffre_1.setText("\\/");
                         down_chiffre_1.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class Interface extends javax.swing.JFrame {
                                 down_chiffre_1ActionPerformed(evt);
                             }
                         });
-                        getContentPane().add(down_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 155, 80, -1));
+                        getContentPane().add(down_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 70, 20));
 
                         down_chiffre_2.setText("\\/");
                         down_chiffre_2.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +123,7 @@ public class Interface extends javax.swing.JFrame {
                                 down_chiffre_2ActionPerformed(evt);
                             }
                         });
-                        getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 155, 80, -1));
+                        getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 70, 20));
 
                         down_chiffre_3.setText("\\/");
                         down_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +131,7 @@ public class Interface extends javax.swing.JFrame {
                                 down_chiffre_3ActionPerformed(evt);
                             }
                         });
-                        getContentPane().add(down_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(218, 155, 70, -1));
+                        getContentPane().add(down_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 70, 20));
 
                         down_chiffre_4.setText("\\/");
                         down_chiffre_4.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +139,7 @@ public class Interface extends javax.swing.JFrame {
                                 down_chiffre_4ActionPerformed(evt);
                             }
                         });
-                        getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 155, 70, -1));
+                        getContentPane().add(down_chiffre_4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 70, 20));
 
                         texte_lbl_nb_chiffres_exacts.setText("Nombre de chiffres exacts :");
                         getContentPane().add(texte_lbl_nb_chiffres_exacts, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 214, 152, -1));
@@ -189,22 +189,22 @@ public class Interface extends javax.swing.JFrame {
                         texte_chiffre_0.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
                         texte_chiffre_0.setText("    0");
                         texte_chiffre_0.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-                        getContentPane().add(texte_chiffre_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 70, 80));
+                        getContentPane().add(texte_chiffre_0, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 70, 80));
 
                         texte_chiffre_1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
                         texte_chiffre_1.setText("    0 ");
                         texte_chiffre_1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-                        getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 70, 70, 80));
+                        getContentPane().add(texte_chiffre_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 70, 80));
 
                         texte_chiffre_2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
                         texte_chiffre_2.setText("    0");
                         texte_chiffre_2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-                        getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 70, 80));
+                        getContentPane().add(texte_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 70, 80));
 
                         texte_chiffre_3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
                         texte_chiffre_3.setText("    0");
                         texte_chiffre_3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-                        getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, 70, 80));
+                        getContentPane().add(texte_chiffre_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 70, 80));
 
                         pack();
                     }// </editor-fold>//GEN-END:initComponents
