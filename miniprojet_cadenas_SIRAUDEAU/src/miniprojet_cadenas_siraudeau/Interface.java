@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package miniprojet_cadenas_siraudeau;
+import javax.swing.JOptionPane;
+import java.util.logging.Logger;
 
 /**
  *
@@ -10,7 +12,7 @@ package miniprojet_cadenas_siraudeau;
  */
 public class Interface extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Interface.class.getName());
+    private static final Logger logger = Logger.getLogger(Interface.class.getName());
     private CadenasJeu jeu;
     
     private int[] chiffres = {0,0,0,0}; 
@@ -22,6 +24,7 @@ public class Interface extends javax.swing.JFrame {
         initComponents();
         jeu = new CadenasJeu();
         mettreAJourAffichage();
+
     }
     
      private void mettreAJourAffichage() {
@@ -30,7 +33,7 @@ public class Interface extends javax.swing.JFrame {
         texte_chiffre_2.setText("   " + chiffres[2]);
         texte_chiffre_3.setText("   " + chiffres[3]);
 
-        texte_score.setText(jeu.getTentatives() + " sur " + jeu.getMaxTentatives());
+        texte_score.setText(jeu.getTentative() + " sur " + jeu.getMaxTentatives()); 
     }
 
     /**
@@ -43,6 +46,7 @@ public class Interface extends javax.swing.JFrame {
     private void initComponents() {
 
         jButton6 = new javax.swing.JButton();
+        jScrollBar1 = new javax.swing.JScrollBar();
         up_chiffre_1 = new javax.swing.JButton();
         up_chiffre_2 = new javax.swing.JButton();
         up_chiffre_3 = new javax.swing.JButton();
@@ -87,7 +91,7 @@ public class Interface extends javax.swing.JFrame {
                         up_chiffre_2ActionPerformed(evt);
                     }
                 });
-                getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 37, -1, -1));
+                getContentPane().add(up_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, -1, -1));
 
                 up_chiffre_3.setText("/\\");
                     up_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
@@ -119,7 +123,7 @@ public class Interface extends javax.swing.JFrame {
                                 down_chiffre_2ActionPerformed(evt);
                             }
                         });
-                        getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 155, -1, -1));
+                        getContentPane().add(down_chiffre_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(126, 155, 80, -1));
 
                         down_chiffre_3.setText("\\/");
                         down_chiffre_3.addActionListener(new java.awt.event.ActionListener() {
@@ -219,7 +223,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_up_chiffre_4ActionPerformed
 
     private void up_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_up_chiffre_1ActionPerformed
-        chiffres[0] = (chiffres[0] + 9) % 10;
+        chiffres[0] = (chiffres[0] + 1) % 10;
         mettreAJourAffichage();
     }//GEN-LAST:event_up_chiffre_1ActionPerformed
 
@@ -234,23 +238,40 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_bouton_recommencerActionPerformed
 
     private void down_chiffre_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_1ActionPerformed
-        // TODO add your handling code here:
+        chiffres[0] = (chiffres[0] + 9) % 10 % 10;
+        mettreAJourAffichage();
     }//GEN-LAST:event_down_chiffre_1ActionPerformed
 
     private void down_chiffre_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_2ActionPerformed
-        // TODO add your handling code here:
+        chiffres[1] = (chiffres[1] + 9) % 10;
+        mettreAJourAffichage();
     }//GEN-LAST:event_down_chiffre_2ActionPerformed
 
     private void down_chiffre_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_3ActionPerformed
-        // TODO add your handling code here:
+        chiffres[2] = (chiffres[2] + 9) % 10;
+        mettreAJourAffichage();
     }//GEN-LAST:event_down_chiffre_3ActionPerformed
 
     private void down_chiffre_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_down_chiffre_4ActionPerformed
-        // TODO add your handling code here:
+        chiffres[3] = (chiffres[3] + 9) % 10;
+        mettreAJourAffichage();
     }//GEN-LAST:event_down_chiffre_4ActionPerformed
 
     private void bouton_testerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bouton_testerActionPerformed
-        // TODO add your handling code here:
+        jeu.tester(chiffres);
+
+        texte_nb_chiffres_exacts.setText(String.valueOf(jeu.getNbBienPlaces()));
+        texte_nb_chiffres_haut.setText(String.valueOf(jeu.getNbTropHauts()));
+        texte_nb_chiffres_bas.setText(String.valueOf(jeu.getNbTropBas()));
+
+        texte_score.setText(jeu.getTentative() + " sur " + jeu.getMaxTentatives());
+
+        if (jeu.estGagne()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Félicitations ! Vous avez trouvé le code !");
+        } else if (jeu.estTermine()) {
+            JOptionPane.showMessageDialog(this, "Partie terminée ! Le code était : " +
+                    java.util.Arrays.toString(jeu.getCodeSecret()));
+        }
     }//GEN-LAST:event_bouton_testerActionPerformed
 
     /**
@@ -288,6 +309,7 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JLabel texte_chiffre_0;
     private javax.swing.JLabel texte_chiffre_1;
     private javax.swing.JLabel texte_chiffre_2;
