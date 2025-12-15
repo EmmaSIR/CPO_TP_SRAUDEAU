@@ -11,8 +11,9 @@ import java.util.Random;
  * @author emmas
  */
 public class CadenasJeu {
-    private int[] codeSecret;
-    private int tentative;
+    
+    private int[] codeSecret; 
+    private int tentative;      
     private final int MAX_TENTATIVES = 5;
 
     private int nbBienPlaces;
@@ -63,13 +64,13 @@ public class CadenasJeu {
     public int getTentative() { return tentative; }
     public int getMaxTentatives() { return MAX_TENTATIVES; }
 
+    public boolean estGagne() {
+        return nbBienPlaces == 4;
+    }
+
     public boolean estTermine() {
         return tentative >= MAX_TENTATIVES || estGagne();
     }
-
-    public boolean estGagne() {
-        return nbBienPlaces == 4;
-    } 
 
     public int[] getCodeSecret() {
         return codeSecret.clone();
